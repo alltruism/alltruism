@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SwDcOct</title>
+  <title>ALLtruism</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h1>ALLtruism</h1>
 
 <%= yield %>
 
+<div></div>
+<%= link_to 'All events', events_path %> |
+<%= link_to 'All organizations', organizations_path %>
 </body>
 </html>
