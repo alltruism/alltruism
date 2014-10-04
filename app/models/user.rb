@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :event_volunteers
+  has_many :events, :through => :event_volunteers
   attr_accessible :email, :fname, :lname, :location, :password
   has_secure_password
   before_save { self.email = email.downcase }

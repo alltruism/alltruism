@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @event_volunteer.event_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @event_volunteer.user_id %>
+</p>
+
+<p>
+  <b>Showed up:</b>
+  <%= @event_volunteer.showed_up %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_volunteer_path(@event_volunteer) %> |
+<%= link_to 'Back', event_volunteers_path %>

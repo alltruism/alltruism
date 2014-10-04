@@ -1,4 +1,7 @@
 SwDcOct::Application.routes.draw do
+  resources :event_volunteers
+
+
   resources :sessions, :only => [:new, :create, :destroy]
   match '/signup', to: 'users#new', via: 'get'
   match '/signin', to: 'sessions#new', via: 'get'
