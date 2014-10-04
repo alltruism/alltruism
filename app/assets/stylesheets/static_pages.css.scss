@@ -1,17 +1,4 @@
-* {
-	vertical-align: baseline;
-	font-weight: inherit;
-	font-family: 'Lato', sans-serif;
-	font-style: inherit;
-	font-size: 100%;
-	outline: 0;
-	padding: 0;
-	margin: 0;
-}
-body, html {
-	height: 100%;
-}
-
+/* This code is only meant for previewing your Reflow design. */
 .primaryContainer {
     height: auto;
     margin-left: auto;
@@ -24,7 +11,7 @@ body, html {
     float: left;
     height: 48px;
     margin-left: 0%;
-    margin-top: 0em;
+    margin-top: 0px;
     clear: none;
     width: 100%;
     display: block;
@@ -41,26 +28,10 @@ body, html {
     margin-right: auto;
 }
 
-#text {
-    float: left;
-    font-size: 1.7em;
-    width: 14.708751%;
-    height: auto;
-    text-align: left;
-    font-weight: 600;
-    line-height: normal;
-    margin-left: 0.7263796%;
-    margin-top: 2px;
-    clear: none;
-    min-height: 0px;
-    color: rgb(255, 255, 255);
-    margin-right: 0%;
-}
-
-#box2 {
+#box3 {
     float: left;
     height: 29px;
-    margin-left: 1.386566%;
+    margin-left: 1.22631%;
     margin-top: 3px;
     clear: none;
     width: 381.0625px;
@@ -69,7 +40,7 @@ body, html {
     background-color: rgb(255, 255, 255);
 }
 
-#text1 {
+#text2 {
     float: left;
     font-size: 1em;
     width: 86.120223%;
@@ -86,7 +57,7 @@ body, html {
     margin-right: 0%;
 }
 
-#text2 {
+#text3 {
     float: left;
     font-size: 1.2em;
     width: 6.400689%;
@@ -109,7 +80,7 @@ body, html {
     font-family: FontAwesome;
 }
 
-#text3 {
+#text4 {
     float: left;
     font-size: 1.2em;
     width: 25.982108%;
@@ -117,7 +88,7 @@ body, html {
     text-align: right;
     font-weight: normal;
     line-height: 1em;
-    margin-left: 13.830825%;
+    margin-left: 10.416667%;
     margin-top: 7px;
     clear: none;
     min-height: 22px;
@@ -134,10 +105,11 @@ body, html {
     background-color: rgb(151, 214, 146);
 }
 
-#box3 {
+#box5 {
     float: none;
     height: 278px;
     margin-left: auto;
+    margin-top: 63px;
     clear: none;
     width: 556.015625px;
     background-color: rgb(232, 229, 229);
@@ -148,7 +120,7 @@ body, html {
     margin-right: auto;
 }
 
-#text4 {
+#text5 {
     float: none;
     font-size: 2.1em;
     width: 70.529547%;
@@ -165,7 +137,7 @@ body, html {
     font-family: Lato;
 }
 
-#box4 {
+#box6 {
     float: none;
     height: auto;
     margin-left: auto;
@@ -207,7 +179,7 @@ body, html {
     border-width: 0px;
 }
 
-#text5 {
+#text6 {
     float: none;
     font-size: 1em;
     width: 65.028396%;
@@ -222,5 +194,58 @@ body, html {
     color: rgb(73, 65, 65);
     font-family: Lato;
     margin-right: auto;
+}
+
+#box2 {
+    float: left;
+    height: 30px;
+    margin-left: 0.05225753%;
+    margin-top: 2px;
+    clear: none;
+    width: 18.953804%;
+    margin-right: 0%;
+    display: block;
+}
+
+#text {
+    float: left;
+    font-size: 1.6em;
+    width: 19.797794%;
+    height: auto;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1em;
+    margin-left: 0%;
+    margin-top: 6px;
+    clear: none;
+    min-height: 27px;
+    font-family: FontAwesome;
+    color: rgb(255, 255, 255);
+    margin-right: 0%;
+}
+
+#text1 {
+    float: left;
+    font-size: 1.7em;
+    width: 77.527574%;
+    height: auto;
+    text-align: left;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 0%;
+    margin-top: 0px;
+    clear: none;
+    min-height: 0px;
+    color: rgb(255, 255, 255);
+    margin-right: 0%;
+}
+
+#box4 {
+    float: left;
+    height: 597px;
+    margin-left: 0%;
+    margin-top: 0px;
+    clear: both;
+    width: 100%;
 }
 
