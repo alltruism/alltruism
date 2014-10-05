@@ -30,6 +30,15 @@
   <%= @event.end_time %>
 </p>
 
+<% if current_user && !current_user.events.include?(@event) %>
+  <%= form_for EventVolunteer.new(event_id: @event.id, user_id: current_user.id) do |f| %>
+    <%= f.hidden_field :event_id %>
+    <%= f.hidden_field :user_id %>
+    <%= f.submit 'Sign me up!' %>
+  <% end %>
+<% elsif current_user %>
+  <p>You are signed up for this event.</p>
+<% end %>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

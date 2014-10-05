@@ -44,7 +44,7 @@ class EventVolunteersController < ApplicationController
 
     respond_to do |format|
       if @event_volunteer.save
-        format.html { redirect_to @event_volunteer, notice: 'Event volunteer was successfully created.' }
+        format.html { redirect_to :back, notice: 'You have been signed up!' }
         format.json { render json: @event_volunteer, status: :created, location: @event_volunteer }
       else
         format.html { render action: "new" }
