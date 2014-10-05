@@ -68,12 +68,40 @@ Organization EIN&#x3a;
 Account Information
 </p>
 	<div>
-	<%= f.text_field :phone, :placeholder=>"Account manager's name." %>
+	<%= f.text_field :account_manager, :placeholder=>"Account manager's name." %>
 	</div> 
 	<div>
 	<%= f.text_field :email, :placeholder=>"Account manager's email address." %>
 	</div> 
 <br />
+<p  class="col">
+Website
+</p>
+	<div>
+	<%= f.text_field :website, :placeholder=>"www.thebest.org" %>
+	</div>
+<br />
+<p  class="col">
+Address
+</p>
+	<div>
+	<%= f.text_field :address, :placeholder=>"Address" %>
+	</div>
+<br />
+<p  class="col">
+Phone
+</p>
+	<div>
+	<%= f.text_field :phone, :placeholder=>"Org. phone number" %>
+	</div>
+<br />
+<p  class="col">
+Mission Statement
+</p>
+	<div>
+	<%= f.text_area :description, :placeholder=>"Mission Statement" %>
+	</div>
+</br> 
 	<div class="actions">
 	<%= f.submit %>
 	</div>

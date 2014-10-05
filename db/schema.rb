@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(:version => 20141004222313) do
     t.datetime "updated_at", :null => false
   end
 
+ActiveRecord::Schema.define(:version => 20141005001148) do
+
   create_table "events", :force => true do |t|
     t.string   "name",            :null => false
     t.text     "description"
@@ -34,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20141004222313) do
 
   create_table "organizations", :force => true do |t|
     t.string   "name",                           :null => false
+    t.text     "description",     :limit => 255
     t.string   "address"
     t.string   "phone"
     t.string   "email",                          :null => false
@@ -41,8 +44,8 @@ ActiveRecord::Schema.define(:version => 20141004222313) do
     t.string   "website"
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
-    t.text     "description",     :limit => 255
     t.string   "password_digest"
+    t.string   "account_manager"
   end
 
   create_table "users", :force => true do |t|
