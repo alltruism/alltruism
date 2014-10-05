@@ -1,25 +1,75 @@
 <p id="notice"><%= notice %></p>
+<%= form_for(@user) do |f| %>
+<% if @user.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-<p>
-  <b>Fname:</b>
-  <%= @user.fname %>
+<ul>
+<% @user.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+ <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<div id="primaryContainer" class="primaryContainer clearfix">
+<div id="box" class="clearfix">
+<div id="box1" class="clearfix">
+<a id="box2" href="how_to_help.html" class="clearfix">
+<p id="text">
+<br />
 </p>
-
-<p>
-  <b>Lname:</b>
-  <%= @user.lname %>
+<p id="text1">
+ALLtruism
 </p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
+</a>
+<div id="box3" class="clearfix">
+<p id="text2">
+Search&#x3a; Organizations, volunteers, and events
 </p>
-
-<p>
-  <b>Location:</b>
-  <%= @user.location %>
+<p id="text3">
+<span id="textspan"></span><br />
 </p>
-
+</div>
+<p id="text4">
+DISCOVER &nbsp; &#x7c; &nbsp; LOGIN
+</p>
+</div>
+</div>
+<div id="OrgRegistration" class="clearfix">
+<div id="Title" class="clearfix">
+<p id="text5">
+Welcome <%= @user.fname %> <%=@user.lname %>
+</p>
+<div id="Form" class="clearfix">
+<p class="col">
+Email&#x3a;
+</p>
+	<div>
+	<%= @user.email %>
+	</div>
+<br />
+<p class="col">
+Location&#x3a;
+</p>
+	<div>
+	<%= @user.location %>
+	</div>
+<br />
+<p class="col">
+<%= link_to "Search Organizations", organizations_path %>
+</p>
+<br \>
+<p class="col">
+<%= link_to "Search Events", events_path %>
+</p>
+<br \>
+</div
+</div>
+</div>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
