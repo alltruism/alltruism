@@ -4,8 +4,6 @@
     <!-- This code is only meant for previewing your Reflow design. -->
 
     <head>
-	<link rel="stylesheet" href="boilerplate.css">
-	<link rel="stylesheet" href="how to help.css">
    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<meta charset="utf-8">
@@ -18,22 +16,17 @@
             <div id="box1" class="clearfix">
                 <div id="box2" class="clearfix">
                     <p id="text">
-                    <br />
+                      <%= link_to "", root_url %><br />
                     </p>
                     <p id="text1">
-                    ALLtruism
+                      <%= link_to 'ALLtruism', root_url %>
                     </p>
                 </div>
-                <div id="box3" class="clearfix">
-                    <p id="text2">
-                    Search&#x3a; Organizations, volunteers, and events
-                    </p>
-                    <p id="text3">
-                    <span id="textspan"></span><br />
-                    </p>
-                </div>
+                  <%= form_tag static_pages_search_path, :method => 'get' do %>
+                    <%= raw text_field_tag :search, nil, :placeholder => 'Search: Organizations, volunteers, and events', :id => "box3" %>
+                  <% end %>
                 <p id="text4">
-                DISCOVER &nbsp; &#x7c; &nbsp; LOGIN
+                  <%= link_to 'DISCOVER', events_path %> | <%= link_to 'LOGIN', signin_path %>
                 </p>
             </div>
         </div>

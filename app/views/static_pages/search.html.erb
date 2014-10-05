@@ -1,0 +1,12 @@
+<% if @matches.empty? %>
+  No matches found.
+<% else %>
+  Matches:
+  <ul>
+    <% @matches.each do |match| %>
+      <li><%= link_to match.name, match %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= link_to 'Back', root_url %>

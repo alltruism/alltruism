@@ -73,28 +73,21 @@
     color: rgb(122, 109, 109);
 }
 
-#textspan {
-    float: none;
-    font-size: 1em;
-    line-height: 1em;
-    font-family: FontAwesome;
-}
-
 #text4 {
-    float: left;
+    float: right;
     font-size: 1.2em;
     width: 25.982108%;
     height: auto;
     text-align: right;
     font-weight: normal;
     line-height: 1em;
-    margin-left: 10.416667%;
-    margin-top: 7px;
     clear: none;
-    min-height: 22px;
     color: rgb(255, 255, 255);
     font-family: Lato;
     margin-right: 0%;
+}
+#text4 a {
+    color: white;
 }
 
 #input:hover {
@@ -238,6 +231,10 @@
     min-height: 0px;
     color: rgb(255, 255, 255);
     margin-right: 0%;
+}
+
+#text a, #text1 a {
+    color: white;
 }
 
 #box4 {
