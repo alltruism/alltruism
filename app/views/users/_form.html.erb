@@ -1,37 +1,88 @@
+
 <%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<% if @user.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(@user.errors.count, "error") %> prohibited this volunteer from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<ul>
+<% @user.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+ <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<div id="primaryContainer" class="primaryContainer clearfix">
+<div id="box" class="clearfix">
+<div id="box1" class="clearfix">
+<a id="box2" href="how_to_help.html" class="clearfix">
+<p id="text">
+<br />
+</p>
+<p id="text1">
+ALLtruism
+</p>
+</a>
+<div id="box3" class="clearfix">
+<p id="text2">
+Search&#x3a; Organizations, volunteers, and events
+</p>
+<p id="text3">
+<span id="textspan"></span><br />
+</p>
+</div>
+<p id="text4">
+DISCOVER &nbsp; &#x7c; &nbsp; LOGIN
+</p>
+</div>
+</div>
+<div id="OrgRegistration" class="clearfix">
+<div id="Title" class="clearfix">
+<p id="text5">
+Register as a Volunteer 
+</p>
+</div>
+<div id="Form" class="clearfix">
+<p  class="col">
+First Name&#x3a;
+</p>
+	<div>
+	<%= f.text_field :fname, :placeholder=>"Enter your name" %>
+	</div>
+<br />
+<p  class="col">
+Last Name&#x3a;
+</p>
+	<div>
+	<%= f.text_field :lname, :placeholder=>"Enter your last name" %>
+	</div>
+<br />
+<p  class="col">
+Password&#x3a;
+</p>
+	<div>
+	<%= f.password_field :password, :placeholder=>"Enter a password" %>
+	</div>    
+<br />
+<p  class="col">
+Email&#x3a;
+</p>
+	<div>
+	<%= f.text_field :email, :placeholder=>"Email" %>
+	</div>
+<br />
+<p  class="col">
+Location&#x3a;
+</p>
+	<div>
+	<%= f.text_field :location, :placeholder=>"City" %>
+	</div>
+<br />
+	<div class="actions">
+	<%= f.submit %>
+	</div>
 
-  <div class="field">
-    <%= f.label :fname %><br />
-    <%= f.text_field :fname %>
-  </div>
-  <div class="field">
-    <%= f.label :lname %><br />
-    <%= f.text_field :lname %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+</div>
 <% end %>
