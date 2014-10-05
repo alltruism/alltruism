@@ -1,40 +1,106 @@
 <p id="notice"><%= notice %></p>
+<%= form_for(@organization) do |f| %>
+<% if @organization.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
 
-<p>
-  <b>Name:</b>
-  <%= @organization.name %>
+<ul>
+<% @organization.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+ <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<div id="primaryContainer" class="primaryContainer clearfix">
+<div id="box" class="clearfix">
+<div id="box1" class="clearfix">
+<a id="box2" href="how_to_help.html" class="clearfix">
+<p id="text">
+<br />
 </p>
-
-<p>
-  <b>Description:</b>
-  <%= @organization.description %>
+<p id="text1">
+ALLtruism
 </p>
-
-<p>
-  <b>Address:</b>
-  <%= @organization.address %>
+</a>
+<div id="box3" class="clearfix">
+<p id="text2">
+Search&#x3a; Organizations, volunteers, and events
 </p>
-
-<p>
-  <b>Phone:</b>
-  <%= @organization.phone %>
+<p id="text3">
+<span id="textspan"></span><br />
 </p>
-
-<p>
-  <b>Email:</b>
-  <%= @organization.email %>
+</div>
+<p id="text4">
+DISCOVER &nbsp; &#x7c; &nbsp; LOGIN
 </p>
-
-<p>
-  <b>Ein:</b>
-  <%= @organization.ein %>
+</div>
+</div>
+<div align="center">
+<%= image_tag(@organization.image_path, size: "160x160")%>
+</div>
+<div id="OrgRegistration" class="clearfix">
+<div id="Title" class="clearfix">
+<p id="text5">
+<%= @organization.name %>
 </p>
-
-<p>
-  <b>Website:</b>
-  <%= @organization.website %>
+<div id="Form" class="clearfix">
+<p  class="col">
+Mission&#x3a;
 </p>
+	<div>
+	<%= @organization.description %>
+	</div>
+<br />
+<p  class="col">
+Organization EIN
+&#x3a;
+</p>
+	<div>
+	<%= @organization.ein %>
+	</div>
+<br />
+<p  class="col">
+Contact Information
+</p>
+	<div>
+	Contact Person - <%= @organization.account_manager %>
+<br />
+	Email - <%= @organization.email %>
+<br />
+	Phone - <%= @organization.phone %>
+<br />
+	</div>
+<br />
 
-
+<p  class="col">
+Address&#x3a;
+</p>
+	<div>
+	<%= @organization.address %>
+	</div>
+<br />
+<p  class="col">
+Website&#x3a;
+</p>
+	<div>
+	<%= @organization.website %>
+	</div>
+<br />
+<p  class="col">
+Events&#x3a;
+</p>
+	<div>
+	<% @organization.events.each do |e| %>
+	<%= link_to(e.name, e) %> <br />
+	<% end %>
+	</div>
+<br />
+</div
+</div>
+</div>
+<% end %>
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
