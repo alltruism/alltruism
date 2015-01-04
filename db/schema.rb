@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141005155730) do
+ActiveRecord::Schema.define(:version => 20150104221239) do
 
   create_table "event_volunteers", :force => true do |t|
     t.integer  "event_id",   :null => false
@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(:version => 20141005155730) do
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
     t.string   "password_digest"
-    t.string   "account_manager"
     t.string   "image_path"
   end
 
