@@ -1,6 +1,14 @@
 class Organization < ActiveRecord::Base
-  validates_presence_of :name, :ein, :email
-  attr_accessible :address, :description, :ein, :email, :name, :phone, :website,:password_digest, :account_manager, :image_path
-  has_secure_password
   has_many :events
+  attr_accessible :name, :ein, :address, :description, :phone, :website,:image_path
+  before_validation :clean_ein
+  validates :name, presence: true, uniqueness: { case_sensitive: false }
+  validates :ein, presence: true, uniqueness: true, format: { with: /\A\d{9}\z/ }
+
+private
+
+  def clean_ein
+    self[:ein] = ein.to_s.gsub(/\D/, '')
+  end
+
 end
