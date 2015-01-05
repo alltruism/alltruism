@@ -1,125 +1,50 @@
 <%= form_for(@organization) do |f| %>
-<% if @organization.errors.any? %>
-<div id="error_explanation">
-<h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
+  <% if @organization.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
 
-<ul>
-<% @organization.errors.full_messages.each do |msg| %>
-<li><%= msg %></li>
-<% end %>
-</ul>
-</div>
-<% end %>
- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<div id="primaryContainer" class="primaryContainer clearfix">
-<div id="box" class="clearfix">
-<div id="box1" class="clearfix">
-<a id="box2" href="how_to_help.html" class="clearfix">
-<p id="text">
-<br />
-</p>
-<p id="text1">
-ALLtruism
-</p>
-</a>
-<div id="box3" class="clearfix">
-<p id="text2">
-Search&#x3a; Organizations, volunteers, and events
-</p>
-<p id="text3">
-<span id="textspan"></span><br />
-</p>
-</div>
-<p id="text4">
-DISCOVER &nbsp; &#x7c; &nbsp; LOGIN
-</p>
-</div>
-</div>
-<div id="OrgRegistration" class="clearfix">
-<div id="Title" class="clearfix">
-<p id="text5">
-Register Your Organization
-</p>
-</div>
-<div id="Form" class="clearfix">
-<p  class="col">
-Organization Name&#x3a;
-</p>
-	<div>
-	<%= f.text_field :name, :placeholder=>"Enter the name of your organization" %>
-	</div>
-<br />
-<p  class="col">
-Password&#x3a;
-</p>
-	<div>
-	<%= f.password_field :password_digest, :placeholder=>"Enter a password" %>
-	</div>    
-<br />
-<p  class="col">
-Organization EIN&#x3a;
-</p>
-	<div>
-	<%= f.text_field :ein, :placeholder=>"Enter your organization's Federal Tax ID number" %>
-	</div> 
-<br />	   
-<p  class="col">
-Account Information
-</p>
-	<div>
-	<%= f.text_field :account_manager, :placeholder=>"Account manager's name." %>
-	</div> 
-	<div>
-	<%= f.text_field :email, :placeholder=>"Account manager's email address." %>
-	</div> 
-<br />
-<p  class="col">
-Website
-</p>
-	<div>
-	<%= f.text_field :website, :placeholder=>"www.thebest.org" %>
-	</div>
-<br />
-<p  class="col">
-Address
-</p>
-	<div>
-	<%= f.text_field :address, :placeholder=>"Address" %>
-	</div>
-<br />
-<p  class="col">
-Phone
-</p>
-	<div>
-	<%= f.text_field :phone, :placeholder=>"Org. phone number" %>
-	</div>
-<br />
-<p  class="col">
-Image
-</p>
-	<div>
-	<%= f.text_field :image_path, :placeholder=>"pic" %>
-	</div>
-<br />
-<p  class="col">
-Mission Statement
-</p>
-	<div>
-	<%= f.text_area :description, :placeholder=>"Mission Statement" %>
-	</div>
-</br> 
-	<div class="actions">
-	<%= f.submit %>
-	</div>
-
-</div>
-</div>
-
-
-
-
-
-
-
+      <ul>
+      <% @organization.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :ein %><br />
+    <%= f.text_field :ein %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :image_path %><br />
+    <%= f.text_field :image_path %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>
