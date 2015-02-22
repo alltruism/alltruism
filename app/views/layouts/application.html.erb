@@ -21,6 +21,28 @@
   </head>
 
   <body>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "ALLtruism", events_path %></h1>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><%= link_to "Events", events_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Organizations", organizations_path %></li>
+          <li class="divider"></li>
+          <% if current_user %>
+            <li><%= link_to "Sign out", signout_path, :method => 'delete' %></li>
+          <% else %>
+            <li><%= link_to "Sign up", new_user_path %></li>
+            <li><%= link_to "Sign in", signin_path %></li>
+          <% end %>
+        </ul>
+      </section>
+    </nav>
 
     <%= yield %>
 
