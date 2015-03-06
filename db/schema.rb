@@ -33,15 +33,15 @@ ActiveRecord::Schema.define(:version => 20150104221239) do
   end
 
   create_table "organizations", :force => true do |t|
-    t.string   "name",                           :null => false
-    t.text     "description",     :limit => 255
+    t.string   "name",            :null => false
+    t.text     "description"
     t.string   "address"
     t.string   "phone"
-    t.string   "email",                          :null => false
-    t.string   "ein",                            :null => false
+    t.string   "email",           :null => false
+    t.string   "ein",             :null => false
     t.string   "website"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.string   "password_digest"
     t.string   "image_path"
   end
