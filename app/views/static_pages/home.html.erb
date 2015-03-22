@@ -1,6 +1,11 @@
 <%= form_tag static_pages_search_path, :method => 'get' do %>
-  <%= text_field_tag :search, nil, :placeholder => 'Search for an organization or event' %>
+  <div class="small-10 columns">
+    <%= text_field_tag :search, nil, :placeholder => 'Search for an organization or event' %>
+  </div>
+  <div class="small-2 columns">
+    <%= submit_tag 'Search', class: 'button postfix' %>
+  </div>
+  <div class="small-12 columns">
+    <%= link_to 'Browse all events', events_path %>
+  </div>
 <% end %>
-<p>
-  <%= link_to 'Browse all events', events_path %>
-</p>
