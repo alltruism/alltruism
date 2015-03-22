@@ -1,6 +1,7 @@
 class Organization < ActiveRecord::Base
   has_many :events
-  attr_accessible :name, :ein, :email, :address, :description, :phone, :website,:image_path
+  has_and_belongs_to_many :organizers, class_name: 'User'
+  attr_accessible :name, :ein, :email, :address, :description, :phone, :website, :image_path
   before_validation :clean_ein
   validates :name, presence: true, uniqueness: { case_sensitive: false }
   validates :ein, presence: true, uniqueness: true, format: { with: /\A\d{9}\z/ }
