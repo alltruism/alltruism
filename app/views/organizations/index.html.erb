@@ -10,8 +10,10 @@
     <th>Ein</th>
     <th>Website</th>
     <th></th>
-    <th></th>
-    <th></th>
+    <% if @organizations.any? { |o| o.organizers.include? current_user } %>
+      <th></th>
+      <th></th>
+    <% end %>
   </tr>
 
 <% @organizations.each do |organization| %>
@@ -24,12 +26,16 @@
     <td><%= organization.ein %></td>
     <td><%= organization.website %></td>
     <td><%= link_to 'Show', organization %></td>
-    <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
-    <td><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if organization.organizers.include? current_user %>
+      <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
+      <td><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Organization', new_organization_path %>
+<% if current_user %>
+  <%= link_to 'New Organization', new_organization_path %>
+<% end %>

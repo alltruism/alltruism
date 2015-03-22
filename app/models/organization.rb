@@ -5,6 +5,7 @@ class Organization < ActiveRecord::Base
   before_validation :clean_ein
   validates :name, presence: true, uniqueness: { case_sensitive: false }
   validates :ein, presence: true, uniqueness: true, format: { with: /\A\d{9}\z/ }
+  validates :organizers, presence: true
 
 private
 
