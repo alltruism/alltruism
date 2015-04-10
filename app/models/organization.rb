@@ -7,6 +7,10 @@ class Organization < ActiveRecord::Base
   validates :ein, presence: true, uniqueness: true, format: { with: /\A\d{9}\z/ }
   validates :organizers, presence: true
 
+  def to_s
+    name
+  end
+
 private
 
   def clean_ein

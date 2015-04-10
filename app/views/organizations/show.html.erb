@@ -35,6 +35,9 @@
   <%= @organization.website %>
 </p>
 
+<% if @organization.organizers.include?(current_user) %>
+  <%= link_to "New event", new_event_path(event: {organization_id: @organization.id}) %> |
+  <%= link_to 'Edit', edit_organization_path(@organization) %>
+<% end %>
 
-<%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
